@@ -4,8 +4,12 @@ import studyIcon from "../../../assets/icons/study.svg";
 import videoChatIcon from "../../../assets/icons/video-chat.svg";
 import speakingClubsIcon from "../../../assets/icons/speaking-clubs.svg";
 import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 export const Language = () => {
+  const isLogged = useSelector((state) => state.login.isLogged);
+  console.log(isLogged);
+
   return (
     <div className="section">
       <div className="section__container">
@@ -36,7 +40,7 @@ export const Language = () => {
             />
             <h2>Алфавит</h2>
           </NavLink>
-			 <NavLink
+          <NavLink
             className="navlink"
             style={{
               display: "flex",
@@ -44,7 +48,7 @@ export const Language = () => {
               alignItems: "center",
               justifyContent: "space-between",
             }}
-            to={"/language/study"}
+            to={isLogged == true ? "/language/study" : ""}
           >
             <img
               className="section__container-category"
@@ -70,7 +74,7 @@ export const Language = () => {
             />
             <h2>Грамматика</h2>
           </NavLink>
-          
+
           {/*<NavLink
             className="navlink"
             style={{
