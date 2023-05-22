@@ -37,6 +37,8 @@ function AlphabetComponent() {
           display: "flex",
           flexDirection: "row",
           justifyContent: "space-between",
+          marginLeft: "auto",
+          marginRight: "auto",
           width: 300,
         }}
       >

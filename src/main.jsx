@@ -30,9 +30,10 @@ import Test_Unit5 from "./pages/categories/language/study/levels/beginner/unit-5
 import Task_Unit6 from "./pages/categories/language/study/levels/beginner/unit-6/Task_unit-6";
 import Test_Unit6 from "./pages/categories/language/study/levels/beginner/unit-6/Test_unit-6";
 import Unit7_Topics from "./pages/categories/language/study/levels/beginner/unit-7/Topics";
-import Task_Unit7 from "./pages/categories/language/study/levels/beginner/unit-7/Task_unit-6";
+import Task_Unit7 from "./pages/categories/language/study/levels/beginner/unit-7/Task_unit-7";
 import Unit8_Topics from "./pages/categories/language/study/levels/beginner/unit-8/Topics";
 import Unit9_Topics from "./pages/categories/language/study/levels/beginner/unit-9/Topics";
+import Test_Unit7 from "./pages/categories/language/study/levels/beginner/unit-7/Test_unit-7";
 
 const router = createBrowserRouter([
   {
@@ -145,7 +146,7 @@ const router = createBrowserRouter([
           },
           {
             path: "/language/study/beginner/unit-7/test/:num",
-            element: <Test_Unit6 unit={6 - 1} />,
+            element: <Test_Unit7 unit={7 - 1} />,
           },
 			 {
             path: "/language/study/beginner/unit-8/topic/:num",

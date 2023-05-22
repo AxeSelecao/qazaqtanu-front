@@ -133,7 +133,7 @@ export const Header = () => {
                       >
                         {material.type == "topic" ? "" : ""}
                         {material.type == "task" ? ">" : ""}
-                        {material.type == "test" ? "?" : ""}
+                        {material.type == "test" ? "Т" : ""}
                       </div>
                     );
                   } else if (!material.completed) {
@@ -145,7 +145,7 @@ export const Header = () => {
                       >
                         {material.type == "topic" ? "" : ""}
                         {material.type == "task" ? ">" : ""}
-                        {material.type == "test" ? "?" : ""}
+                        {material.type == "test" ? "Т" : ""}
                       </div>
                     );
                   }

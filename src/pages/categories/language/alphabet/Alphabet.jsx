@@ -1,5 +1,6 @@
 import { useState } from "react";
 import LetterModal from "../../../../components/language/LetterModal";
+import AlphabetComponent from "../../../../components/AlphabetComponent";
 
 function Alphabet() {
   const kyrillicAlphabet = "АӘБВГҒДЕЁЖЗИЙКҚЛМНҢОӨПРСТУҰҮФХҺЦЧШЩЪЫIЬЭЮЯ";
@@ -18,7 +19,18 @@ function Alphabet() {
         symbol={symbol}
       />
       <h1>Әліппе</h1>
-      <div
+      <p
+        style={{ width: "60%", marginTop: 25, marginBottom: 15, fontSize: 20 }}
+      >
+        Казахский алфавит состоит из 42 букв. 15 гласных и 25 согласных Ъ и б.
+        Казахский алфавит, основанный на кириллице, имеет характерные для
+        казахского языка девять букв. Это: б, г, н, к, у, у, у, х, и. Остальные
+        буквы общие для русского и казахского языков.
+      </p>
+      <div style={{ width: "60%" }}>
+        <AlphabetComponent />
+      </div>
+      {/*<div
         style={{
           display: "flex",
           flexDirection: "row",
@@ -67,7 +79,7 @@ function Alphabet() {
             );
           }
         })}
-      </div>
+      </div>*/}
     </div>
   );
 }
