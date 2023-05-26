@@ -132,7 +132,7 @@ export const Header = () => {
                         onClick={clickMaterial(material)}
                       >
                         {material.type == "topic" ? "" : ""}
-                        {material.type == "task" ? ">" : ""}
+                        {material.type == "task" ? "З" : ""}
                         {material.type == "test" ? "Т" : ""}
                       </div>
                     );
@@ -144,7 +144,7 @@ export const Header = () => {
                         onClick={clickMaterial(material)}
                       >
                         {material.type == "topic" ? "" : ""}
-                        {material.type == "task" ? ">" : ""}
+                        {material.type == "task" ? "З" : ""}
                         {material.type == "test" ? "Т" : ""}
                       </div>
                     );
