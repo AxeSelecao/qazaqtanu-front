@@ -46,24 +46,46 @@ export const Header = () => {
       materialsElems[i].style.border = "none";
     }
     event.currentTarget.style.border = "2px solid white";
-    if (material.type == "task") {
-      navigate(
-        `/language/study/beginner/unit-${Number(location.pathname[30])}/task/${
-          material.position
-        }`
-      );
-    } else if (material.type == "topic") {
-      navigate(
-        `/language/study/beginner/unit-${Number(location.pathname[30])}/topic/${
-          material.position
-        }`
-      );
-    } else if (material.type == "test") {
-      navigate(
-        `/language/study/beginner/unit-${Number(location.pathname[30])}/test/${
-          material.position
-        }`
-      );
+    if (location.pathname[31] == "/") {
+      if (material.type == "task") {
+        navigate(
+          `/language/study/beginner/unit-${Number(
+            location.pathname[30]
+          )}/task/${material.position}`
+        );
+      } else if (material.type == "topic") {
+        navigate(
+          `/language/study/beginner/unit-${Number(
+            location.pathname[30]
+          )}/topic/${material.position}`
+        );
+      } else if (material.type == "test") {
+        navigate(
+          `/language/study/beginner/unit-${Number(
+            location.pathname[30]
+          )}/test/${material.position}`
+        );
+      }
+    } else {
+      if (material.type == "task") {
+        navigate(
+          `/language/study/beginner/unit-${Number(
+            location.pathname[30] + location.pathname[31]
+          )}/task/${material.position}`
+        );
+      } else if (material.type == "topic") {
+        navigate(
+          `/language/study/beginner/unit-${Number(
+            location.pathname[30] + location.pathname[31]
+          )}/topic/${material.position}`
+        );
+      } else if (material.type == "test") {
+        navigate(
+          `/language/study/beginner/unit-${Number(
+            location.pathname[30] + location.pathname[31]
+          )}/test/${material.position}`
+        );
+      }
     }
   };
 
@@ -122,7 +144,10 @@ export const Header = () => {
             <div className="header__materials">
               {!isLoading ? (
                 data[2].results[0].units[
-                  Number(location.pathname[30]) - 1
+                  //Number(location.pathname[30]) - 1
+                  location.pathname[31] == "/"
+                    ? Number(location.pathname[30]) - 1
+                    : Number(location.pathname[30] + location.pathname[31]) - 1
                 ].materials.map((material, i) => {
                   if (material.completed) {
                     return (
@@ -156,11 +181,11 @@ export const Header = () => {
             </div>
           </div>
           <div className="header__personal">
-            <input
+            {/*<input
               className="header__personal-searcher"
               type="text"
               placeholder="Поиск темы..."
-            />
+            />*/}
             {isLogged ? (
               <>
                 <div className="header__personal-points">
@@ -275,11 +300,11 @@ export const Header = () => {
           </div>
         </div>
         <div className="header__personal">
-          <input
+          {/*<input
             className="header__personal-searcher"
             type="text"
             placeholder="Поиск темы..."
-          />
+          />*/}
           {isLogged ? (
             <>
               <div className="header__personal-points">

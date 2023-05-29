@@ -11,6 +11,8 @@ function LevelRoadMap() {
 
   let location = useLocation();
 
+  console.log(location.pathname[30] + location.pathname[31]);
+
   return (
     <div className="levelroadmap">
       <div className="levelroadmap__sidebar">
@@ -27,20 +29,42 @@ function LevelRoadMap() {
         </div>
         <div className="levelroadmap__sidebar-units">
           {data[0].units.map((unit, index) => {
-            return (
-              <NavLink
-                className="navlink"
-                to={`/language/study/beginner/unit-${index + 1}/topic/1`}
-              >
-                <h4
-                  className={`${
-                    location.pathname[30] == index + 1 ? "navlink-active" : ""
-                  }`}
+            if (location.pathname[31] == "/") {
+              return (
+                <NavLink
+                  className="navlink"
+                  to={`/language/study/beginner/unit-${index + 1}/topic/1`}
+                  // onClick={console.log(index)}
                 >
-                  {index + 1}. {unit.title[1]} <br />({unit.title[0]})
-                </h4>
-              </NavLink>
-            );
+                  <h4
+                    className={`${
+                      location.pathname[30] == index + 1 ? "navlink-active" : ""
+                    }`}
+                  >
+                    {index + 1}. {unit.title[1]} <br />({unit.title[0]})
+                  </h4>
+                </NavLink>
+              );
+            } else {
+              console.log(location.pathname[30] + location.pathname[31]);
+              return (
+                <NavLink
+                  className="navlink"
+                  to={`/language/study/beginner/unit-${index + 1}/topic/1`}
+                  // onClick={console.log(index)}
+                >
+                  <h4
+                    className={`${
+                      location.pathname[30] + location.pathname[31] == index + 1
+                        ? "navlink-active"
+                        : ""
+                    }`}
+                  >
+                    {index + 1}. {unit.title[1]} <br />({unit.title[0]})
+                  </h4>
+                </NavLink>
+              );
+            }
           })}
         </div>
       </div>

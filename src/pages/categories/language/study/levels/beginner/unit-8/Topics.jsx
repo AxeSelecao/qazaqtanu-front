@@ -257,7 +257,7 @@ function Unit8_Topics({ unit }) {
                   className="unit__container-description"
                   style={{ fontSize: 16, fontStyle: "italic" }}
                 >
-                  Мысалы: алтын, ауыр, кең.
+                  Мысалы: әдемілеу, үлкенірек.
                 </p>
               </ul>
             </div>
@@ -273,7 +273,7 @@ function Unit8_Topics({ unit }) {
                   className="unit__container-description"
                   style={{ fontSize: 16, fontStyle: "italic" }}
                 >
-                  Мысалы: ыстық, қоныр.
+                  Мысалы: жап-жасыл, қап-қара.
                 </p>
               </ul>
             </div>
